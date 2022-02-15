@@ -26,7 +26,7 @@
   color: #293241;
 }
 .custom-button.btn {
-  background-color: #293241;
+  background-color: #ff009d;
   color: #FFF;
   border: none;
 }
@@ -48,4 +48,8 @@
   height: 100%;
   width: 100%;
   opacity: 0.4;
+}
+
+.jokes {
+  color: #ff009d;;
 }

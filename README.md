@@ -5,20 +5,17 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 3.1.0
+
+* Rails 6.1.4.6
+* Yarn for react features
 
 * System dependencies
 
 * Configuration
+- bundle install
+- yarn install
+
 
 * Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ - rails db:create rails db:migrate

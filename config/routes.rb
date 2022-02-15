@@ -2,9 +2,7 @@ Rails.application.routes.draw do
   namespace :api do 
     namespace :v1 do 
       get 'universities/index'
-      post 'universities/create'
-      get 'universities/show'
-      post 'universities/destroy'
+      #post 'universities/create'
     end
   end
   root 'homepage#index'
