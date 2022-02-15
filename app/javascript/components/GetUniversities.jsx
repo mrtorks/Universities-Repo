@@ -32,13 +32,8 @@ const GetUniversities = (props) => {
           <p className="lead">
             This might be the first time running this project
           </p>
-          <p className="lead">
-            Enjoy these jokes while I get the data. When the data is ready it
-            would be rendered.
-          </p>
-          <p className="lead">
-          When the data is ready itwould be rendered.
-          </p>
+          <p className="lead">Enjoy these jokes while I get the data.</p>
+          <p className="lead">When the data is ready it would be rendered.</p>
 
           <hr className="my-4" />
 

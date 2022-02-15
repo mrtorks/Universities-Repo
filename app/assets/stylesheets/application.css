@@ -14,10 +14,10 @@
  *= require_self
  */
 .bg_primary-color {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .primary-color {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .bg_secondary-color {
   background-color: #293241;
@@ -27,11 +27,11 @@
 }
 .custom-button.btn {
   background-color: #ff009d;
-  color: #FFF;
+  color: #fff;
   border: none;
 }
 .custom-button.btn:hover {
-  color: #FFF !important;
+  color: #fff !important;
   border: none;
 }
 .hero {
@@ -51,5 +51,12 @@
 }
 
 .jokes {
-  color: #ff009d;;
+  color: #ff009d;
+}
+
+.colored {
+  background-color: #ff009d;
+}
+.colored-text {
+  color: #ffffff !important ;
 }

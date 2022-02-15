@@ -19,6 +19,54 @@ const Universities = (props) => {
       .catch(() => this.props.history.push("/"));
   }, [setUniversities]);
 
+  const highlightUniversities = (university) => {
+    if (university.domains.length > 1) {
+      return (
+        <TableRow
+          key={university.id}
+          className="colored"
+          sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+        >
+          <TableCell className="colored-text" component="th" scope="row">
+            {university.name}
+          </TableCell>
+          <TableCell className="colored-text" align="right">
+            {university.domains.map((domain, index) => (
+              <div key={index}>{domain}</div>
+            ))}
+          </TableCell>
+          <TableCell className="colored-text" align="right">
+            {university.country}
+          </TableCell>
+          <TableCell className="colored-text" align="right">
+            {university.web_pages.map((web_page, index) => (
+              <div key={index}>{web_page}.</div>
+            ))}
+          </TableCell>
+        </TableRow>
+      );
+    }
+    return (
+      <TableRow
+        key={university.id}
+        sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+      >
+        <TableCell component="th" scope="row">
+          {university.name}
+        </TableCell>
+        <TableCell align="right">
+          <div>{university.domains}</div>
+        </TableCell>
+        <TableCell align="right">{university.country}</TableCell>
+        <TableCell align="right">
+          {university.web_pages.map((web_page, index) => (
+            <div key={index}>{web_page}.</div>
+          ))}
+        </TableCell>
+      </TableRow>
+    );
+  };
+
   const emptyDB = () => {
     if (universities.length == 0) {
       return true;
@@ -40,27 +88,29 @@ const Universities = (props) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {universities.map((university) => (
-            <TableRow
-              key={university.id}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {university.name}
-              </TableCell>
-              <TableCell align="right">
-                {university.domains.map((domain, index) => (
-                  <div key={index}>{domain}</div>
-                ))}
-              </TableCell>
-              <TableCell align="right">{university.country}</TableCell>
-              <TableCell align="right">
-                {university.web_pages.map((web_page, index) => (
-                  <div key={index}>{web_page}.</div>
-                ))}
-              </TableCell>
-            </TableRow>
-          ))}
+          {universities.map(
+            (university) =>
+              highlightUniversities(university)
+            //<TableRow
+            //  key={university.id}
+            //  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+            //>
+            //  <TableCell component="th" scope="row">
+            //    {university.name}
+            //  </TableCell>
+            //  <TableCell align="right">
+            //    {university.domains.map((domain, index) => (
+            //      <div key={index}>{domain}</div>
+            //    ))}
+            //  </TableCell>
+            //  <TableCell align="right">{university.country}</TableCell>
+            //  <TableCell align="right">
+            //    {university.web_pages.map((web_page, index) => (
+            //      <div key={index}>{web_page}.</div>
+            //    ))}
+            //  </TableCell>
+            //</TableRow>
+          )}
           ;
         </TableBody>
       </Table>
